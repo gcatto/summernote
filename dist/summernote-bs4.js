@@ -1,3 +1,10 @@
+// R3 notes
+// - Changed from 'data-' to 'data-bs-' as per https://github.com/summernote/summernote/issues/3941
+// - Changed modal close button elements from Bootstrap4 to Bootstrap5
+// - Changed from form-group to mb-3 for Bootstrap4 to Bootstrap5
+// - Added form-label to note-form-labels for Bootstrap4 to Bootstrap5
+// - Removed sourceMappingURL
+
 /*!
  *
  * Super simple wysiwyg editor v0.8.18
@@ -156,7 +163,7 @@ var Renderer = /*#__PURE__*/function () {
 
       if (this.options && this.options.data) {
         jquery__WEBPACK_IMPORTED_MODULE_0___default.a.each(this.options.data, function (k, v) {
-          // Changed from 'data-' to 'data-bs-' as per https://github.com/summernote/summernote/issues/3941
+          // R3 note: Changed from 'data-' to 'data-bs-' as per https://github.com/summernote/summernote/issues/3941
           $node.attr('data-bs-' + k, v);
         });
       }
@@ -7424,8 +7431,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: this.ui.dropdownButtonContents('', this.options),
           tooltip: this.lang.color.more,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle: 'dropdown'
           }
         }), this.ui.dropdown({
           items: (backColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.background + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="backColor" data-value="transparent">', this.lang.color.transparent, '</button>', '</div>', '<div class="note-holder" data-event="backColor"><!-- back colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="backColorPicker">', this.lang.color.cpSelect, '</button>', '<input type="color" id="backColorPicker" class="note-btn note-color-select-btn" value="' + this.options.colorButton.backColor + '" data-event="backColorPalette">', '</div>', '<div class="note-holder-custom" id="backColorPalette" data-event="backColor"></div>', '</div>'].join('') : '') + (foreColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.foreground + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="removeFormat" data-value="foreColor">', this.lang.color.resetToDefault, '</button>', '</div>', '<div class="note-holder" data-event="foreColor"><!-- fore colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="foreColorPicker">', this.lang.color.cpSelect, '</button>', '<input type="color" id="foreColorPicker" class="note-btn note-color-select-btn" value="' + this.options.colorButton.foreColor + '" data-event="foreColorPalette">', '</div>', // Fix missing Div, Commented to find easily if it's wrong
@@ -7506,8 +7512,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents(_this2.ui.icon(_this2.options.icons.magic), _this2.options),
           tooltip: _this2.lang.style.style,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdown({
           className: 'dropdown-style',
@@ -7625,8 +7630,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents('<span class="note-current-fontname"></span>', _this2.options),
           tooltip: _this2.lang.font.name,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdownCheck({
           className: 'dropdown-fontname',
@@ -7645,8 +7649,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents('<span class="note-current-fontsize"></span>', _this2.options),
           tooltip: _this2.lang.font.size,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdownCheck({
           className: 'dropdown-fontsize',
@@ -7662,8 +7665,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents('<span class="note-current-fontsizeunit"></span>', _this2.options),
           tooltip: _this2.lang.font.sizeunit,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdownCheck({
           className: 'dropdown-fontsizeunit',
@@ -7738,8 +7740,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents(_this2.ui.icon(_this2.options.icons.alignLeft), _this2.options),
           tooltip: _this2.lang.paragraph.paragraph,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdown([_this2.ui.buttonGroup({
           className: 'note-align',
@@ -7755,8 +7756,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents(_this2.ui.icon(_this2.options.icons.textHeight), _this2.options),
           tooltip: _this2.lang.font.height,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdownCheck({
           items: _this2.options.lineHeights,
@@ -7772,8 +7772,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: _this2.ui.dropdownButtonContents(_this2.ui.icon(_this2.options.icons.table), _this2.options),
           tooltip: _this2.lang.table.table,
           data: {
-            // Changed from toggle: 'dropdown' to bs-toggle: 'dropdown'
-            "bs-toggle": 'dropdown'
+            toggle:'dropdown'
           }
         }), _this2.ui.dropdown({
           title: _this2.lang.table.table,
@@ -8381,7 +8380,9 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize() {
       var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="form-group note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
+      // R3 note: changed from form-group to mb-3 for Bootstrap4 to Bootstrap5
+      // R3 note: added form-label to note-form-labels for Bootstrap4 to Bootstrap5
+      var body = ['<div class="mb-3 note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"form-label note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="mb-3 note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"form-label note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
         className: 'sn-checkbox-open-in-new-window',
         text: this.lang.link.openInNewWindow,
         checked: true
@@ -8670,7 +8671,9 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
       }
 
       var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="image/*" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
+      // R3 note: changed from form-group to mb-3 for Bootstrap4 to Bootstrap5
+      // R3 note: added form-label to note-form-labels for Bootstrap4 to Bootstrap5
+      var body = ['<div class="mb-3 note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="form-label note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="image/*" multiple="multiple"/>', imageLimitation, '</div>', '<div class="mb-3 note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="form-label note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
       var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
       var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
@@ -9001,7 +9004,9 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize() {
       var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
+      // R3 note: changed from form-group to mb-3 for Bootstrap4 to Bootstrap5
+      // R3 note: added form-label to note-form-labels for Bootstrap4 to Bootstrap5
+      var body = ['<div class="mb-3 note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"form-label note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
       var buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
       var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.video.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
@@ -10085,7 +10090,8 @@ var dialog = renderer["a" /* default */].create('<div class="modal note-modal" a
   $node.attr({
     'aria-label': options.title
   });
-  $node.html(['<div class="modal-dialog">', '<div class="modal-content">', options.title ? '<div class="modal-header">' + '<h4 class="modal-title">' + options.title + '</h4>' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;</button>' + '</div>' : '', '<div class="modal-body">' + options.body + '</div>', options.footer ? '<div class="modal-footer">' + options.footer + '</div>' : '', '</div>', '</div>'].join(''));
+  // R3 note: changed modal close button elements from Bootstrap4 to Bootstrap5
+  $node.html(['<div class="modal-dialog">', '<div class="modal-content">', options.title ? '<div class="modal-header">' + '<h4 class="modal-title">' + options.title + '</h4>' + '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' + '</div>' : '', '<div class="modal-body">' + options.body + '</div>', options.footer ? '<div class="modal-footer">' + options.footer + '</div>' : '', '</div>', '</div>'].join(''));
 });
 var popover = renderer["a" /* default */].create(['<div class="note-popover popover in">', '<div class="arrow"></div>', '<div class="popover-content note-children-container"></div>', '</div>'].join(''), function ($node, options) {
   var direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
@@ -10240,4 +10246,3 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summe
 
 /******/ });
 });
-//# sourceMappingURL=summernote-bs4.js.map
