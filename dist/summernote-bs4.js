@@ -3,6 +3,7 @@
 // - Changed modal close button elements from Bootstrap4 to Bootstrap5
 // - Changed from form-group to mb-3 for Bootstrap4 to Bootstrap5
 // - Added form-label to note-form-labels for Bootstrap4 to Bootstrap5
+// - Commented out tooltip: auto to prevent error with Bootstrap5 that resulting it needing to click on dropdown trigger elements twice
 // - Removed sourceMappingURL
 
 /*!
@@ -9824,7 +9825,8 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summe
     styleWithCSS: false,
     shortcuts: true,
     textareaAutoSync: true,
-    tooltip: 'auto',
+    // Commenting this out prevents error with Bootstrap5 that resulting it needing to click on dropdown trigger elements twice
+    // tooltip: 'auto',
     container: null,
     maxTextLength: 0,
     blockquoteBreakingLevel: 2,
